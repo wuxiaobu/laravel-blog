@@ -10,7 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
     return view('welcome');
 });
@@ -20,17 +19,9 @@ Route::get('/', function () {
  */
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
     Route::get('/', 'IndexController@index')->name('admin');
-    Route::post('/auth/login', 'AuthController@authenticate');
-    Route::post('/auth/check', 'AuthController@checkUser');
-    Route::post('/auth/logout', 'AuthController@logout');
+    Route::post('/user/login', 'UserController@login');
+    Route::post('/user/check', 'UserController@checkUser');
+    Route::post('/user/logout', 'UserController@logout');
  
  });
  
- Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
-     Route::resource('/users', 'UserController');
-     Route::resource('/category', 'CategoryController');
-     Route::resource('/posts', 'PostController');
-     Route::resource('/comment', 'CommentController');
-     Route::resource('/trashes', 'TrashController');
-     Route::post('/', 'IndexController@statistical');
- });
