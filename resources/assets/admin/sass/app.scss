@@ -8,8 +8,11 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-// element-ui default-theme
-@import '../../../../node_modules/element-theme-default/lib/index.css';
+// element-ui
+@import '../../../../node_modules/element-ui/lib/theme-chalk/index.css';
+
+// font-awesome
+@import "../../../../node_modules/font-awesome/css/font-awesome.min.css";
 
 .navbar-laravel {
   background-color: #fff;

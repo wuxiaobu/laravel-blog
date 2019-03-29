@@ -24,4 +24,9 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
     Route::post('/user/logout', 'UserController@logout');
  
  });
+
+ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
+    Route::get('/category', 'CategoryController@index');
+    //Route::post('/user', 'UserController@update');
+ });
  
